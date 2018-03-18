@@ -10,7 +10,7 @@ class Address
     public static function getAddresses()
     {
         $db = Db::getConnection();
-        $sql = 'SELECT * FROM address';
+        $sql = 'SELECT * FROM address ORDER BY name';
         $result = $db->prepare($sql);
         
         $result->setFetchMode(PDO::FETCH_ASSOC);
